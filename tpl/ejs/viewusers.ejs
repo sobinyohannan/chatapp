@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <title>Chat Application - <%= title %></title>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+      <div id="user">
+	<p><%= title %></p>
+	<% users.forEach( function ( user ){ %>
+	<p>
+	  <span>
+	    <%= user.fullname %>
+	  </span>
+	  <span>
+	    <%= user.username %>
+	  </span>
+	</p>	
+      <% }); %>
+      </div>
+  </body>
+</html>

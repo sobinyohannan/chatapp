@@ -1,0 +1,11 @@
+html(lang="en")
+  head
+    title Chat Application - #{title}
+    link(rel="stylesheet", href="../style.css")
+  body
+    div#user
+      p #{title}
+      each u in users
+	span #{u.fullname}
+	span #{u.username}
+	br

@@ -1,0 +1,28 @@
+<html>
+ 	<head>
+ 		<script src="/socket.io/socket.io.js"></script>
+ 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+ 		<script src="./userActions.js"></script>
+ 		<link rel="stylesheet" href="style.css" />
+ 	</head>
+ 	<body>
+ 		<div id="user">
+ 			<p>User Page</p>
+
+			<div id="chatmessages"></div>
+			<div id="chatstatus"></div>
+			<div id="chatuserinfo">
+				Username:<input type="text" id="username" value=""/><br />
+				<input type="button" id="join" value="Join" />
+			</div>
+
+			<div id="chat">
+				<textarea id="message"></textarea>
+				<input type="hidden" id="tosocket" value="" />
+				<input type="hidden" id="mysocket" value="" /><br />
+				<input type="button" id="Send" name="send" value="Send Message" />
+				<input type="button" id="Disconnect" value="Disconnect" />
+			</div>
+ 		</div>
+ 	</body>
+ </html>

@@ -1,0 +1,18 @@
+html(lang="en")
+  head
+    title Chat Application - #{title}
+    link(rel="stylesheet", href="../style.css")
+  body
+    div#user
+      p #{title}
+      form(action="./saveuser",method="POST")
+        label Name:&nbsp;
+        input(name="fullname")
+        br
+        label Username:&nbsp;
+        input(name="username")
+        br
+        label Password:&nbsp;
+        input(name="password")
+        br
+        input(type="submit",value="Save")

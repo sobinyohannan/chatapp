@@ -1,0 +1,20 @@
+<html>
+  <head>
+    <title>Chat Application - <%= title %></title>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+      <div id="user">
+	<p><%= title %></p>
+	<form method="POST" action="./saveuser">
+	    <label> Name : </label>
+	    <input type="text" name="fullname" /><br />
+	    <label> Username : </label>
+	    <input type="text" name="username" /><br />
+	    <label> Password : </label>
+	    <input type="text" name="password" /><br />
+	    <input type="submit" value="Save" />	    
+	</form>
+      </div>
+  </body>
+</html>

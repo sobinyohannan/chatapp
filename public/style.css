@@ -1,0 +1,80 @@
+body{
+  background:#DCE5E9;
+}
+#agent, #user{
+  margin:auto;
+  width:70%;
+  background:#fff;
+  padding:20px;
+  font:"Helvetica",Georgia,Tahoma,Arial;
+  color:#1D5B75;
+}
+#chatmessages{
+  background:#E6F5F4;
+  color:#3C66BD;
+  font:"Helvetica",Georgia,Tahoma,Arial;
+  font-size:12pt;
+  width:500px;
+  border:solid thin #4F80E7;
+  margin:auto;
+  padding:30px;  
+}
+#chatstatus{  
+  margin:auto;
+  padding:10px;
+  width:500px;
+  font-size:10pt;  
+}
+#chatuserinfo{
+    margin:auto;
+    width:500px;
+    border:thin #4F80E7;    
+}
+#chat{
+    margin:auto;
+    width:500px;
+    border:thin #4F80E7;    
+}
+
+input[type="text"],input[type="password"]{
+  width:200px;
+  height:30px;
+  border:solid thin #7F7F7F;
+  margin:5px;  
+}
+
+input[type="button"], input[type="submit"]{
+  width:auto;
+  height:auto;
+  padding:5px 10px;
+  background:#1370B0;
+  color:#fff;
+  border:none;
+  margin:10px;
+}
+input[type="button"]:hover{
+  font-weight:bold;
+}
+textarea{
+  width:300px;
+  height:150px;
+  border:solid thin #7F7F7F;
+  color:#7F7F7F;
+}
+#user #chat{
+  display:none
+}
+.error {
+  background:#F7A1B6;
+  border:solid thin #EE1D25;
+  padding:10px 5px;
+  color:#EE1D25;
+}
+
+.message{
+  background:#8CE28B;
+  border:solid thin #0E4F0E;
+  padding:10px 5px;
+  color:#0E4F0E;
+}
+

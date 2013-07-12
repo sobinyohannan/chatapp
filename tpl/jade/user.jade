@@ -1,0 +1,22 @@
+html(lang="en")
+  head
+    script(src='/socket.io/socket.io.js')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js')    
+    script(src="./userActions.js")
+    link(rel="stylesheet", href="style.css")
+  body
+    div#user
+      p User Page
+      #chatmessages
+      #chatstatus
+      #chatuserinfo
+        label Username:
+          input(id="username")
+        input(type="button",id="join",value="Join")
+      #chat
+        textarea(id="message")
+        input(type="hidden",id="tosocket")
+        input(type="hidden",id="mysocket")
+        br
+        input(type="button",id="Send",value="Send Message")
+        input(type="button",id="Disconnect",value="Disconnect")

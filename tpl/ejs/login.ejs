@@ -1,0 +1,39 @@
+<html>
+  <head>
+    <title>Chat Application - <%= title %></title>
+    <link rel="stylesheet" href="../style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+    <script type="text/javascript">
+      function autoHide()
+      {
+	 var v=setTimeout(function(){
+	      $('#message').fadeOut();
+	  },1000);
+      }
+    </script>
+  </head>
+  <body>
+      <div id="user">
+	<p><%= title %></p>
+	<% if(typeof(message)!='undefined') { %>
+	<script>autoHide();</script>
+	<span class="message" id="message"><%= message %></span>
+	<% } %>
+	<br />
+	<% if(typeof(error)!='undefined') { %>
+	<span class="error"><%= error %></span>
+	<% } %>
+	<br />
+	  <form method="POST" action="/users/loginSubmit">
+	      <label>Username : </label>
+	      <input type="text" id="username" name="username" />
+	      <br />
+	      <label>Password : </label>
+	      <input type="password" id="password" name="password" />
+	      <br />
+	      <input type="submit" name="submit" value="Login" />
+	  </form>
+      </div>
+  </body>
+</html>
+
