@@ -49,7 +49,8 @@ app.get('/users/login',routes.login);
 app.post('/users/loginSubmit',routes.loginSubmit);
 app.get('/userhome',routes.userhome);
 app.get('/users/logout',routes.logout);
-
+app.get('/chat/testadd',routes.chattest);
+app.get('/chat/view',routes.viewchats);
 
 var agent_index=0;
 app.get('/',function(req, res){

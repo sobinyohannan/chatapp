@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <title>Chat Application - <%= title %></title>
+    <link rel="stylesheet" href="../style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+  </head>
+  <body>
+      <div id="user">	
+	<p><%= title %></p>	
+	<% chats.forEach( function ( ch ){ %>
+	<p>
+	  <span>
+	    <%= ch.user_id %>
+	  </span>
+	  <span>
+	    <%= ch.message %>
+	  </span>
+	</p>	
+      <% }); %>
+      </div>
+  </body>
+</html>
+

@@ -2,6 +2,7 @@
 // Load add user page
 var mongoose = require( 'mongoose' );
 var Users = mongoose.model( 'Users' );
+var Chat =mongoose.model('Chat');
 var bcrypt = require('bcrypt');
 var SALT_WORK_FACTOR = 10; 
 
@@ -105,6 +106,26 @@ exports.logout=function(req, res)
 {
     req.session=null;
     res.render('login',{title:'Login',message:'Successfully logged out'});
+}
+
+exports.chattest=function(req, res){
+    var chat=new Chat();
+    chat.testAdd(function(response){
+        if(response==null)
+          res.send("Not inserted!");
+        else
+          res.send("Inserted");
+    });
+}
+
+exports.viewchats=function(req, res){
+    var chat=new Chat();
+    chat.viewchats(function(status,result){
+        if(status==null)
+          res.send('Chats empty');
+        else
+          res.render('chatslist',{title:'Chat List',chats:result});
+    });
 }
 
 
